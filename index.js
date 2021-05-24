@@ -27,7 +27,7 @@ let audioBlock = (() => {
         let recordingBlock = document.createElement("div")
         recordingBlock.className = "recBlock"
 
-        let recordingClip = document.createElement("input")
+        let recordingClip = document.createElement("audio")
         recordingClip.className = "recording"
 
         headingDiv.append(pageTitle)
