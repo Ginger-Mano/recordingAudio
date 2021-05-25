@@ -12,10 +12,15 @@ let audioBlock = (() => {
         recordButton.className = "button"
         recordButton.innerText = "record"
 
+        const handleStream = () => {
+            console.log("handle")
+        }
+
         recordButton.addEventListener("click", (evt) => {
             console.log("test")
 
             navigator.mediaDevices.getUserMedia({audio : true, video : false})
+            .then(handleStream)
         })
 
         let playButton = document.createElement("button")
@@ -33,7 +38,7 @@ let audioBlock = (() => {
         let recordingBlock = document.createElement("div")
         recordingBlock.className = "recBlock"
 
-        let recordingClip = document.createElement("audio")
+        let recordingClip = document.createElement("recorder")
         recordingClip.className = "recording"
 
         headingDiv.append(pageTitle)
