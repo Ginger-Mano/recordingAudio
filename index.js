@@ -12,6 +12,12 @@ let audioBlock = (() => {
         recordButton.className = "button"
         recordButton.innerText = "record"
 
+        recordButton.addEventListener("click", (evt) => {
+            console.log("test")
+
+            navigator.mediaDevices.getUserMedia({audio : true, video : false})
+        })
+
         let playButton = document.createElement("button")
         playButton.className = "button"
         playButton.innerText = "play"
