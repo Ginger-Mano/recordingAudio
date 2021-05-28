@@ -1,4 +1,5 @@
 let webpage = document.querySelector(".main")
+let audio = document.createElement("audio")
 
 let audioBlock = (() => {
     let headingDiv = document.createElement('div')
