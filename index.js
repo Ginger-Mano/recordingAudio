@@ -17,6 +17,8 @@ let audioBlock = (() => {
             console.log("handle")
         }
 
+        //Notes: window.URL object, persist audio blob
+
         recordButton.addEventListener("click", (evt) => {
             console.log("test")
 
@@ -41,6 +43,7 @@ let audioBlock = (() => {
 
         let recordingClip = document.createElement("recorder")
         recordingClip.className = "recording"
+
 
         headingDiv.append(pageTitle)
         recordingBlock.append(recordingClip, recordButton, playButton, stopButton, deleteButton)
